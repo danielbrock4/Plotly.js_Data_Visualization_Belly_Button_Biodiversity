@@ -1,0 +1,19 @@
+<!--Make sure that your files are linked correctly and in the right order. Since Roza needs the Plotly CDN
+  to use Plotly, the CDN <script> tag should come 1st. Since she will also need the data to load before using
+  Plotly, the data file should be linked next. Finally, the script file is linked.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fast-Growing Cities 2016-2017</title> <!--<title> tag is appropriate to the chart Roza is creating-->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!--1st <script> tag links to the Plotly CDN. -->
+</head>
+<body>
+  <div id="bar-plot"></div> <!--The <div> tag, where the Plotly chart will be displayed, is titled "bar-plot."-->
+  <script src="data.js"></script> <!--2nd <script> tag links to the data file, data.js.  -->
+  <script src="plot.js"></script> <!--3rd <script> tag links to the script file for the chart, i.e., the JS code.-->
+</body>
+</html>
+<!-- -->
