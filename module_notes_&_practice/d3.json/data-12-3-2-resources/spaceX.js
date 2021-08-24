@@ -25,5 +25,9 @@ d3.json(url).then(spaceXResults  => console.log(spaceXResults[0].full_name));
 // Retrieve Data from and Array within an Array (latitude)
 d3.json(url).then(spaceXResults  => console.log(spaceXResults[0].location.latitude));
 
-spaceXResults.map(coordinates => console.log(coordinates[0].location.latitude, coordinates[0].location.longitude));
-/* */
+// MAP SKILL DRILL
+// spaceXResults.map(coordinates => console.log(coordinates[0].location.latitude, coordinates[0].location.longitude));
+// /* */
+d3.json(url).then((data) =>
+    data.map(location => console.log(location.location))
+);
