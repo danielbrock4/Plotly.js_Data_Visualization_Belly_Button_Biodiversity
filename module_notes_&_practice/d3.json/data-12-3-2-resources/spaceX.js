@@ -29,5 +29,9 @@ d3.json(url).then(spaceXResults  => console.log(spaceXResults[0].location.latitu
 // spaceXResults.map(coordinates => console.log(coordinates[0].location.latitude, coordinates[0].location.longitude));
 // /* */
 d3.json(url).then((data) =>
-    data.map(location => console.log(location.location))
+    data.map(location => {
+        var long =location.location.longitude;
+        var lat = location.location.latitude;
+        console.log(`${lat} & ${long}`);
+    })
 );
