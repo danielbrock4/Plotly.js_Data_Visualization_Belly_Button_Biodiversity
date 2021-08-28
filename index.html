@@ -20,24 +20,16 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <div class="well"> <!-- well class contains a dropdown menu with an id of selDataset.-->
+        <div class="well">
           <h5>Test Subject ID No.:</h5>
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
-          <!--The <select> tag indicates a dropdown menu. Its id is selDataset. 
-          The <select> tag has an additional attribute, called onchange associated with the optionChanged()function.  
-          When a change takes place in the dropdown menu, the optionChanged() function is called.
-          The argument for theoptionChanged() function is this.value.
-          The argument for theoptionChanged() function is this.value.
-          "this" refers to dropdown menu. So this.value returns to the value attribute of current dropdown menu selection
-            The JS keyword "this" is used to access the object in question. In the context of an event, it refers to 
-            the HTML element that received the event. In this case, this refers to the dropdown menu.-->
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
-          <div id="sample-metadata" class="panel-body"></div> <!-- A <div> with an id of sample-metadata is the information panel.- -->
+          <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
       <div class="col-md-5">
@@ -56,9 +48,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="static_challenge/js/plots.js"></script>
-
+  <script src="charts.js"></script>
+b
 </body>
 
 </html>
-<!-- -->
