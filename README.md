@@ -2,7 +2,7 @@
 ## Resources
 
 - **Data Source:** [data.js](static_challenge/js/data.js)
-- **Software:** Visual Studio Code, JavaScipt, Plotly.js, HTML, D3
+- **Software:** JavaScipt, Plotly.js, HTML, CSS, D3, Visual Studio Code
 
 ## Challenge Project Overview 
 
