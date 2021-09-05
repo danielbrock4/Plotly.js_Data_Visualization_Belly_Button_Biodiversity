@@ -1,0 +1,39 @@
+
+body {
+    background-color: #eef6ff;
+    font: "Gill Sans, sans-serifn"
+}
+.jumbotron {
+    background-size: 100% 100%;
+    color: white; 
+    background-image: url("https://www.cedars-sinai.org/content/dam/cedars-sinai/blog/2020/06/viruses-bacteria-fungi.jpg");
+    background-position: center;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+.well {
+    background-color: white;
+}
+h5 {
+    font-weight: 550;
+    color: #002851;
+    font-stretch: expanded;
+}
+.panel {
+    font-stretch: expanded;
+}
+.panel-default>.panel-heading-custom{
+    background: #004f9f;
+    color: white;
+}
+
+/* .btn {
+    padding: 15px 50px;
+    border: 1;
+    border-color: white;
+    background: #632307;
+    color: #fff;
+} */
+
+
+/* */

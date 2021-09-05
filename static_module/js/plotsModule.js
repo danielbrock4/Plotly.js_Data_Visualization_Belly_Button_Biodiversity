@@ -14,13 +14,13 @@ Therefore, it must be open through local:8000. To get this:
         // otu_ids property is an array of the ID numbers of all the bacteria found in this person's navel.
         // sample_values array contains the corresponding species name for each bacterial ID number. 
         // Some bacterial species have different ID numbers, but are clumped together under the same otu_label
-d3.json("samples1.json").then(data => console.log(data));
+d3.json("js/samples1.json").then(data => console.log(data));
 /*
 1) Extract only the wfreq, or the weekly belly button washing frequency, of each person into a new array 
 2) Sort the wfreq array in descending order
 3) Delete null values from the sorted wfreq array*/
 
-d3.json("samples1.json").then(function(data){
+d3.json("js/samples1.json").then(function(data){
      //map() is used to extract the wfreq property from each “person” in the data.metadata array
      //sort() b - a returns  results in descending order. a - b would return the results in ascending order
      wfreq = data.metadata.map(person => person.wfreq).sort((a,b) => b - a);
@@ -39,7 +39,7 @@ d3.json("samples1.json").then(function(data){
     two elements, inside an outer array. To access these elements, the argument ([first, second]) is used, 
     where first and second are arbitrarily chosen for convenience. They could have been named ([x, y]) or ([key, value]).
     */
-d3.json("samples1.json").then((data) =>
+d3.json("js/samples1.json").then((data) =>
     Object.entries(data.metadata[0]).forEach(([key, value]) => console.log(key + " : " + value))
 );
 /*Dynamically Generate Dropdown Menu Items
@@ -60,7 +60,7 @@ d3.json("samples1.json").then((data) =>
 function init() {
     let selector = d3.select("#selDataset");
 
-    d3.json("samples1.json").then(data => { 
+    d3.json("js/samples1.json").then(data => { 
         console.log(data);
         let samplesNames = data.names;
         samplesNames.forEach(sample => {
@@ -120,7 +120,7 @@ function optionChanged(newSample) {
 8) Finally, the append() and text() methods are chained to append a H6 heading to the panel and print the 
     location of the volunteer to the panel, respectively.*/
 function buildMetadata(sample) {
-    d3.json("samples1.json").then((data) => {
+    d3.json("js/samples1.json").then((data) => {
         var metadata = data.metadata;
         var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
         var result = resultArray[0];

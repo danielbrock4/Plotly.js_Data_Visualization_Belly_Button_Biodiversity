@@ -7,13 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--Add link to our stylesheet under Bootstrap's CDN link. Since we created a stylesheet and index.html file at the same time link to the style.css file that's in our css folder.-->
+  <link rel="stylesheet" href="static_challenge/css/style.css">
+</head>
 </head>
 
 <body>
 
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
+      <div class="col-md-12 jumbotron">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
@@ -21,12 +24,12 @@
     <div class="row">
       <div class="col-md-2">
         <div class="well">
-          <h5>Test Subject ID No.:</h5>
+          <h5>Test Subject ID # :</h5>
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
+        <div class="panel panel-default">
+          <div class="panel-heading panel-heading-custom">
             <h3 class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
@@ -39,17 +42,19 @@
         <div id="gauge"></div>
       </div>
     </div>
+    <br>
     <div class="row">
       <div class="col-md-12">
         <div id="bubble"></div>
       </div>
     </div>
   </div>
+  <br>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="charts.js"></script>
-b
+  <script src="static_challenge/js/charts.js"></script>
+
 </body>
 
 </html>

@@ -89,13 +89,32 @@ function buildCharts(sample) {
         text: otu_labelsBar,
         type: "bar",
         orientation: "h",
-      }
+        marker: {color: [
+          "#daedff",
+          '#c7e3ff',
+          '#9fcfff',
+          '#8cc5ff',
+          '#65b1ff',
+          '#3d9eff',
+          '#168aff', 
+          '#0076ee',
+          '#0063c7',
+          '#004f9f']}
+        }   
     ];
 
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found in Subject: " + sample, 
+      title: {
+        text: "Top 10 Bacteria Cultures Found<br> in Subject: " + sample,
+        font: {
+          size: 22,
+          color: "#002851",
+          weight: 100
+        }
+      }, 
       xaxis: {title: "Sample Sizes"},
+      font:  {family: "Gill Sans, sans-serif"}
     };
 
     //10. Use Plotly to plot the data with the layout. 
@@ -119,10 +138,20 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-        title: "Bacteria Cultures Per Sample in Subject: " + sample,
+        title: {
+          text: "Bacteria Cultures Per Sample in Subject: " + sample,
+          font: {
+            size: 22,
+            color: "#002851",
+            weight: 100
+          }
+        },
         xaxis: {title: "OTU (Operational Taxonomic Unit) ID"},
         yaxis: {title: "Sample Sizes"},
+        font:  {family: "Gill Sans, sans-serif"},
     };
+
+   
     
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
@@ -137,20 +166,36 @@ function buildCharts(sample) {
         mode: "gauge+number" ,
         gauge: {
           axis: { range: [0, 10] },
-          bar: { color: "rgba(175 , 0, 0, .7)" },
+          
+          bar: { 
+            color: "rgba(205 , 69, 0, .8)"
+          },
           steps: [
-            { range: [0, 2], color: "rgba(0, 0, 150, .01)"},
-            { range: [2, 4], color: "rgba(0, 0, 150, .2)"},
-            { range: [4, 6], color: "rgba(0, 0, 150, .4)" },
-            { range: [6, 8], color: "rgba(0, 0, 150, .6)" },
-            { range: [8, 10], color: "rgba(0, 0, 150, .8)"},
+            { range: [0, 1], color: "#eef6ff" },
+            { range: [1, 2], color: '#c7e3ff'},
+            { range: [2, 3], color: '#9fcfff' },
+            { range: [3, 4], color: '#8cc5ff' },
+            { range: [4, 5], color: '#65b1ff' },
+            { range: [5, 6], color: '#3d9eff' },
+            { range: [6, 7], color: '#168aff' },
+            { range: [7, 8], color: '#0076ee' },
+            { range: [8, 9], color: '#0063c7' },
+            { range: [9, 10], color: '#004f9f' },
           ]},
       }
     ];
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      title: 'Belly Button Washing Frequency<br>Scrubs per Week',
+      title: {
+        text: 'Belly Button Washing Frequency<br>Scrubs per Week',
+        font: {
+          size: 22,
+          color: "#002851",
+          weight: 100
+        }
+      },
+      font:  {family: "Gill Sans, sans-serif"}
     
     };
 
