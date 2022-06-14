@@ -1,4 +1,4 @@
-# Webpage Dashboard using JavaScript, Plotly.js, Bootstrap, HTML/Css
+# Webpage Data Insight Dashboard using JavaScript, Plotly.js, Bootstrap, HTML/Css
 ## Resources
 
 - **Data Source:** [data.js](static_challenge/js/data.js)
