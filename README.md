@@ -1,4 +1,4 @@
-# Module 12: Plotly.js Data Visualization
+# Webpage Dashboard Data Visualization using JavaScript, Plotly.js, Bootstrap, HTML/Css
 ## Resources
 
 - **Data Source:** [data.js](static_challenge/js/data.js)
